@@ -1,0 +1,28 @@
+node_modules
+
+# macOS
+.DS_Store
+
+# Node
+npm-debug.log*
+package-lock.json
+yarn.lock
+
+# Build
+dist/
+.build/
+
+# Env
+.env
+
+# Editor
+.vscode/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# Local dev
+/.cache
+/.parcel-cache
