@@ -16,6 +16,14 @@
     .dark-mode video {
       filter: invert(1) hue-rotate(180deg);
     }
+    /* Improve mobile scrolling behavior for window content as a fallback */
+    @media (max-width: 768px) {
+      .window-content {
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+        touch-action: pan-y;
+      }
+    }
   </style>
 </head>
 

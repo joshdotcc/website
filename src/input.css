@@ -74,6 +74,10 @@
   .window-content {
     max-height: calc(100vh - 120px);
     overflow-y: auto;
+    /* Improve mobile scrolling behavior */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
   }
 
   .taskbar-item {
