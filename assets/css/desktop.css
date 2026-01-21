@@ -1,0 +1,85 @@
+.dark-mode {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.dark-mode img,
+.dark-mode video {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Improve mobile scrolling behavior for window content as a fallback */
+@media (max-width: 768px) {
+  .window-content {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+  }
+}
+
+/* Simple Win98 folder styling for Projects window */
+.folder-toolbar {
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  background: linear-gradient(#e0e0e0, #cfcfcf);
+  border-bottom: 2px solid #fff;
+  align-items: center;
+}
+
+.folder-contents {
+  /* Let 98.css visuals show through; keep spacing for icons */
+  background: transparent;
+  border: none;
+  padding: 12px 10px;
+  min-height: 220px;
+  display: block;
+}
+
+.folder-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 8px;
+  width: 96px;
+  height: 110px;
+  background: transparent;
+  border-radius: 2px;
+}
+
+.folder-icon img { width: 48px; height: 48px; }
+
+.folder-icon span { font-size: 13px; text-align: center; }
+
+/* Tweak toolbar button size to match Win98 controls */
+.folder-toolbar .win98-btn {
+  padding: 4px 6px;
+  font-size: 13px;
+  height: 26px;
+  line-height: 1;
+}
+
+.folder-nav-btn {
+  width: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon hover/selection to feel crisp like folder icons */
+.folder-icon {
+  transition: background .12s ease, border .12s ease;
+  cursor: pointer;
+}
+
+.folder-icon:hover {
+  background: rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* Ensure project window sizes match other windows visually */
+#projects.win98-window {
+  min-width: 560px;
+  min-height: 320px;
+}
