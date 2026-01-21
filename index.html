@@ -6,25 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joshua Tucker - Application Security Engineer</title>
   <link rel="icon" href="assets/josh.png" type="image/png" />
-  <link href="./dist/output.css" rel="stylesheet" />
-  <style>
-    .dark-mode {
-      filter: invert(1) hue-rotate(180deg);
-    }
-
-    .dark-mode img,
-    .dark-mode video {
-      filter: invert(1) hue-rotate(180deg);
-    }
-    /* Improve mobile scrolling behavior for window content as a fallback */
-    @media (max-width: 768px) {
-      .window-content {
-        -webkit-overflow-scrolling: touch;
-        overscroll-behavior: contain;
-        touch-action: pan-y;
-      }
-    }
-  </style>
+  <link href="assets/css/output.css" rel="stylesheet" />
+  <link href="assets/css/desktop.css" rel="stylesheet" />
 </head>
 
 <body class="bg-win98-bg font-ms-sans overflow-hidden h-screen flex flex-col">
@@ -56,6 +39,14 @@
         <span>Experience</span>
       </div>
 
+      <!-- Projects Icon -->
+      <div class="desktop-icon" data-window="projects">
+        <div class="icon-img flex items-center justify-center p-1">
+          <img src="assets/folder.png" alt="Projects" class="w-8 h-8" />
+        </div>
+        <span>Projects</span>
+      </div>
+
 
 
       <!-- Contact Icon -->
@@ -74,6 +65,8 @@
         <span>Recycle Bin</span>
       </div>
     </div>
+
+    
 
     <!-- About Me Window -->
     <div id="about" class="win98-window">
@@ -311,6 +304,60 @@
       </div>
     </div>
 
+    <!-- Projects Window -->
+    <div id="projects" class="win98-window" style="display: none;">
+      <div class="window-titlebar">
+        <div>Projects</div>
+        <div class="window-controls">
+          <button class="window-control-btn minimize-btn font-bold">_</button>
+          <button class="window-control-btn maximize-btn window-control-hide-sm">
+            <div class="w-2 h-2 border border-black bg-win98-gray border-t-2"></div>
+          </button>
+          <button class="window-control-btn close-btn">×</button>
+        </div>
+      </div>
+      <div class="window-content">
+        <div class="folder-toolbar mb-2">
+          <div class="text-sm">C:\\Users\\Joshua\\Projects</div>
+        </div>
+
+        <div class="folder-contents">
+          <div class="grid grid-cols-3 gap-4">
+            <!-- Project entry: PokeGuesser -->
+            <button class="folder-icon" onclick="openProject('pokeguesser')">
+              <img src="assets/github.png" alt="PokeGuesser" />
+              <span>PokeGuesser</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PokeGuesser Project Window -->
+    <div id="pokeguesser" class="win98-window" style="display: none;">
+      <div class="window-titlebar">
+        <div>PokeGuesser</div>
+        <div class="window-controls">
+          <button class="window-control-btn minimize-btn font-bold">_</button>
+          <button class="window-control-btn maximize-btn window-control-hide-sm">
+            <div class="w-2 h-2 border border-black bg-win98-gray border-t-2"></div>
+          </button>
+          <button class="window-control-btn close-btn">×</button>
+        </div>
+      </div>
+      <div class="window-content">
+        <h2 class="text-xl mb-2">PokeGuesser</h2>
+        <div class="text-sm mb-3">Technologies: Svelte, JavaScript</div>
+
+        <div class="mb-4">
+          <img src="assets/projects/pokeguesser.png" alt="PokeGuesser screenshot" class="w-full h-auto mb-4" />
+        </div>
+        <div class="flex items-center justify-end">
+          <a href="https://pokeguesser.example" target="_blank" class="win98-btn">View Live Site</a>
+        </div>
+      </div>
+    </div>
+
     <!-- Classified Window -->
     <div id="classified" class="win98-window" style="display: none">
       <div class="window-titlebar">
@@ -543,7 +590,7 @@
             iconSrc = "assets/computer.png";
             break;
           case "projects":
-            iconSrc = "assets/spider.png";
+            iconSrc = "assets/folder.png";
             break;
           case "contact":
             iconSrc = "assets/mail.png";
@@ -634,6 +681,19 @@
 
       // Set initial position
       positionWindow();
+
+      // Center pokeguesser window and make it wider for screenshots
+      if (windowEl.id === "pokeguesser") {
+        if (window.innerWidth > 768) {
+          windowEl.style.width = "640px";
+          windowEl.style.left = `${Math.max(20, window.innerWidth / 2 - 320)}px`;
+          windowEl.style.top = "80px";
+        } else {
+          windowEl.style.left = "10px";
+          windowEl.style.top = "10px";
+          windowEl.style.width = "calc(100% - 20px)";
+        }
+      }
 
       // Update position on resize
       window.addEventListener("resize", function () {
@@ -790,45 +850,20 @@
       }
     });
 
-    // Secret Links Window Keyboard Shortcut (Ctrl+Alt)
-    document.addEventListener("keydown", function (e) {
-      if (e.ctrlKey && e.altKey) {
-        e.preventDefault();
-        const linksWindow = document.getElementById("classified");
-        if (linksWindow) {
-          linksWindow.style.display = "block";
-          makeWindowActive(linksWindow);
-          const title = linksWindow.querySelector(
-            ".window-titlebar div"
-          ).textContent;
-          createTaskbarItem("classified", title);
-        }
-      }
-    });
+
+    // Open a project detail window by id
+    function openProject(projectId) {
+      const win = document.getElementById(projectId);
+      if (!win) return;
+      win.style.display = "block";
+      // derive title from window
+      const titleEl = win.querySelector(".window-titlebar div");
+      const title = titleEl ? titleEl.textContent : projectId;
+      makeWindowActive(win);
+      createTaskbarItem(projectId, title);
+    }
   </script>
-
-  <!-- This finds Custom conversion event for Meta Ads -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const buttons = document.querySelectorAll("a.win98-btn");
-
-      buttons.forEach(function (button) {
-        const isEscapeTheRat =
-          button.textContent.includes("Escape the Rat") &&
-          button.href.includes("tidal.com");
-
-        if (isEscapeTheRat) {
-          button.addEventListener("click", function () {
-            console.log("Custom event TidalClickEscapeTheRat sent");
-            fbq("trackCustom", "TidalClickEscapeTheRat", {
-              destination: button.href,
-              songName: "Escape the Rat",
-            });
-          });
-        }
-      });
-    });
-  </script>
+  
 </body>
 
 </html>
