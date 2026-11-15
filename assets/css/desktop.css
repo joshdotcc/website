@@ -163,31 +163,13 @@
   touch-action: pan-y;
 }
 
-.resume-bullets {
-  margin: 16px 0 0;
-  padding-left: 1.25rem;
-  color: #dfeeff;
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-.resume-bullets li + li {
-  margin-top: 8px;
-}
-
-.role-date {
-  color: #9fb5ce !important;
-  font-size: 0.9rem !important;
-  margin: -4px 0 12px !important;
-}
-
 @media (max-width: 768px) {
-  body.desktop-mode {
+  body {
     height: 100dvh;
     min-height: 100dvh;
   }
 
-  body.desktop-mode main {
+  body main {
     min-height: 0;
     overflow: auto;
     padding-bottom: 44px;
@@ -213,6 +195,11 @@
     width: calc(100% - 16px) !important;
     height: auto !important;
     max-height: none !important;
+    min-height: 0;
+  }
+
+  #projects.win98-window {
+    min-width: 0;
     min-height: 0;
   }
 

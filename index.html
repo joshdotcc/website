@@ -10,8 +10,7 @@
   <link href="assets/css/desktop.css" rel="stylesheet" />
 </head>
 
-<body class="resume-mode bg-win98-bg font-ms-sans overflow-hidden h-screen flex flex-col">
-  <button id="desktop-resume-btn" class="win98-btn resume-toggle-btn">Resume View</button>
+<body class="bg-win98-bg font-ms-sans overflow-hidden h-screen flex flex-col">
 
   <!-- Desktop -->
   <main class="flex-grow relative">
@@ -149,6 +148,16 @@
             <li>Claude and GPT Integrations</li>
             <li>Container Security & Image Scanning</li>
             <li>OWASP Top 10, CWE</li>
+          </ul>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="font-bold mb-2">Education & Credentials</h3>
+          <ul class="list-disc list-inside text-sm">
+            <li>M.S., Cybersecurity and Information Assurance — Western Governors University, 2025</li>
+            <li>B.S., Web Technology — University of Maryland, 2020</li>
+            <li>CompTIA CySA+ and PenTest+, 2025</li>
+            <li>Upwork Top Rated Talent, 2023 · GrowthMentor Rising Star, 2024</li>
           </ul>
         </div>
       </div>
@@ -530,489 +539,6 @@
     </div>
   </footer>
 
-  <div id="resume-mode" class="resume-shell" aria-live="polite">
-    <button id="resume-normal-btn" class="resume-toggle-btn">Windows Desktop</button>
-
-    <div class="resume-progress">
-      <div id="resume-progress-bar" class="resume-progress-bar"></div>
-    </div>
-
-    <div class="resume-page">
-      <aside class="resume-sidebar">
-        <div class="avatar-card">
-          <img src="assets/josh.png" alt="Joshua Tucker" />
-        </div>
-        <div class="profile-block">
-          <p class="eyebrow">Role</p>
-          <h1>Application Security Engineer</h1>
-        </div>
-        <div class="profile-block">
-          <p class="eyebrow">Location</p>
-          <p>Tempe, Arizona · Remote</p>
-        </div>
-        <div class="profile-block">
-          <p class="eyebrow">Focus</p>
-          <ul>
-            <li>Secure SDLC</li>
-            <li>Threat modeling</li>
-            <li>AppSec automation</li>
-            <li>Developer enablement</li>
-          </ul>
-        </div>
-      </aside>
-
-      <main class="resume-content">
-        <section class="story-panel intro-panel">
-          <p class="eyebrow">Interactive resume</p>
-          <h2>Building secure systems that engineers actually want to use.</h2>
-          <p>
-            I’m Joshua Tucker, an application security engineer who blends product thinking, engineering rigor,
-            and hands-on security work to reduce risk without slowing teams down.
-          </p>
-          <div class="cta-row">
-            <a href="mailto:josh@josh.cc">Email</a>
-            <a href="https://www.linkedin.com/in/joshcc/" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
-        </section>
-
-        <section class="story-panel">
-          <p class="eyebrow">Current role</p>
-          <h3>Senior Application Security Engineer at ClickUp</h3>
-          <p class="role-date">July 2026 – Present · Remote</p>
-          <ul class="resume-bullets">
-            <li>Architected an AI-powered triage and routing pipeline using Claude and GPT to collect, reduce, and route data across codebases.</li>
-            <li>Engineered autonomous execution agents and reusable test harnesses for complex platform validation workflows.</li>
-            <li>Designed scheduled, sharded, resumable scanning with code-drift detection across full codebases.</li>
-            <li>Built observability for signal quality, precision, throughput, deduplication, and backlog metrics.</li>
-            <li>Improved pipeline efficiency by about 78% with context-aware filtering and led threat modeling for AI, agent, and webhook integrations.</li>
-          </ul>
-        </section>
-
-        <section class="story-panel">
-          <p class="eyebrow">Previous role</p>
-          <h3>Application Security Engineer at Teradata</h3>
-          <p class="role-date">May 2025 – July 2026 · Remote</p>
-          <ul class="resume-bullets">
-            <li>Reduced metadata discovery from 23 hours to 8 minutes, keeping security data less than 12 hours old.</li>
-            <li>Preserved thousands of security decisions during a global source control migration with a Go utility.</li>
-            <li>Standardized 10,000+ risk exceptions and built a Go AppSec SDK for 900+ repositories.</li>
-            <li>Correlated SCA, SAST, secrets, IaC, and container findings; closed 10,000+ false positives and embedded guardrails in GitHub Actions.</li>
-          </ul>
-        </section>
-
-        <section class="story-panel">
-          <p class="eyebrow">Core strengths</p>
-          <div class="skills-grid">
-            <div>
-              <span>Threat Modeling</span>
-              <div class="skill-bar"><i style="width: 92%"></i></div>
-            </div>
-            <div>
-              <span>Secure SDLC</span>
-              <div class="skill-bar"><i style="width: 96%"></i></div>
-            </div>
-            <div>
-              <span>Code Review</span>
-              <div class="skill-bar"><i style="width: 90%"></i></div>
-            </div>
-            <div>
-              <span>Automation</span>
-              <div class="skill-bar"><i style="width: 94%"></i></div>
-            </div>
-            <div>
-              <span>GitHub Actions</span>
-              <div class="skill-bar"><i style="width: 88%"></i></div>
-            </div>
-            <div>
-              <span>Go / CLIs</span>
-              <div class="skill-bar"><i style="width: 86%"></i></div>
-            </div>
-          </div>
-        </section>
-
-        <section class="story-panel">
-          <p class="eyebrow">Career arc</p>
-          <div class="timeline">
-            <div class="timeline-item">
-              <span class="date">2026</span>
-              <div>
-                <strong>Senior Application Security Engineer</strong>
-                <p>ClickUp</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <span class="date">2025</span>
-              <div>
-                <strong>Application Security Engineer</strong>
-                <p>Teradata</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <span class="date">2023</span>
-              <div>
-                <strong>Web Platform Engineer</strong>
-                <p>DM Cantor · 2023–2024</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <span class="date">2021</span>
-              <div>
-                <strong>Technical Specialist</strong>
-                <p>Gyde Media · 2021–2023</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <span class="date">2018</span>
-              <div>
-                <strong>Senior Developer</strong>
-                <p>The Sher Agency · 2018–2021</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="story-panel">
-          <p class="eyebrow">Projects</p>
-          <div class="project-card">
-            <div>
-              <h4>Sifted</h4>
-              <p>AI-powered RSS aggregation and content intelligence platform.</p>
-            </div>
-            <a href="https://sifted.josh.cc" target="_blank" rel="noreferrer">View live</a>
-          </div>
-        </section>
-
-        <section class="story-panel">
-          <p class="eyebrow">Education & credentials</p>
-          <h3>Cybersecurity, software, and continuous learning.</h3>
-          <ul class="resume-bullets">
-            <li>M.S., Cybersecurity and Information Assurance — Western Governors University, 2025</li>
-            <li>B.S., Web Technology — University of Maryland, 2020</li>
-            <li>CompTIA CySA+ and PenTest+, 2025</li>
-            <li>Upwork Top Rated Talent, 2023 · GrowthMentor Rising Star, 2024</li>
-          </ul>
-        </section>
-
-        <section class="story-panel">
-          <p class="eyebrow">Let’s build</p>
-          <h3>Security that helps teams ship faster.</h3>
-          <p>
-            I work best with engineering teams that want risk reduction, clean systems, and practical security processes
-            that fit real delivery cycles.
-          </p>
-          <div class="cta-row">
-            <a href="mailto:josh@josh.cc">josh@josh.cc</a>
-            <a href="https://www.linkedin.com/in/joshcc/" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
-        </section>
-      </main>
-    </div>
-  </div>
-
-  <style>
-    body.resume-mode main,
-    body.resume-mode footer {
-      display: none !important;
-    }
-
-    body.desktop-mode .resume-shell {
-      display: none !important;
-    }
-
-    body.desktop-mode #desktop-resume-btn {
-      display: inline-flex !important;
-    }
-
-    body.desktop-mode main,
-    body.desktop-mode footer {
-      display: flex !important;
-    }
-
-    body.desktop-mode {
-      overflow: hidden;
-    }
-
-    .resume-toggle-btn {
-      position: fixed;
-      top: 18px;
-      right: 18px;
-      z-index: 1000;
-      display: none;
-    }
-
-    body.resume-mode #resume-normal-btn {
-      display: inline-flex;
-    }
-
-    body.desktop-mode #desktop-resume-btn {
-      display: inline-flex;
-    }
-
-    .resume-shell {
-      display: block;
-      min-height: 100vh;
-      background:
-        radial-gradient(circle at top, rgba(141,188,255,0.32), transparent 32%),
-        linear-gradient(180deg, #061323 0%, #0f1d30 22%, #111c2f 100%);
-      color: #edf5ff;
-      font-family: "Segoe UI", sans-serif;
-      position: relative;
-    }
-
-    .resume-progress {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 8px;
-      background: rgba(255,255,255,0.08);
-      z-index: 20;
-    }
-
-    .resume-progress-bar {
-      height: 100%;
-      width: 0;
-      background: linear-gradient(90deg, #7ae6ff, #83ffba, #ffd76a);
-      box-shadow: 0 0 18px rgba(122, 230, 255, 0.8);
-      transition: width 0.18s ease-out;
-    }
-
-    .resume-page {
-      display: grid;
-      grid-template-columns: 320px minmax(0, 1fr);
-      max-width: 1220px;
-      margin: 0 auto;
-      padding: 72px 24px 80px;
-      gap: 28px;
-    }
-
-    .resume-sidebar {
-      position: sticky;
-      top: 48px;
-      align-self: start;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      padding: 22px 18px;
-      border: 1px solid rgba(167, 204, 255, 0.25);
-      background: rgba(8, 15, 28, 0.7);
-      box-shadow: 0 18px 48px rgba(0,0,0,0.28);
-    }
-
-    .avatar-card {
-      width: 100%;
-      aspect-ratio: 1;
-      overflow: hidden;
-      border: 2px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.04);
-      box-shadow: inset 0 0 0 2px rgba(255,255,255,0.08);
-    }
-
-    .avatar-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .profile-block h1,
-    .profile-block h2,
-    .story-panel h2,
-    .story-panel h3,
-    .story-panel h4 {
-      margin: 0;
-      line-height: 1.15;
-    }
-
-    .profile-block ul {
-      margin: 8px 0 0;
-      padding-left: 18px;
-      line-height: 1.7;
-      color: #dfeeff;
-    }
-
-    .eyebrow {
-      margin: 0 0 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: #8ac8ff;
-      font-size: 11px;
-      font-weight: 700;
-    }
-
-    .resume-content {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    .story-panel {
-      padding: 28px 28px 30px;
-      border: 1px solid rgba(167, 204, 255, 0.2);
-      background: rgba(12, 20, 36, 0.7);
-      box-shadow: 0 14px 35px rgba(11, 20, 32, 0.28);
-      transform: translateY(18px);
-      opacity: 0.7;
-      transition: transform 0.35s ease, opacity 0.35s ease, border-color 0.35s ease;
-      scroll-margin-top: 48px;
-    }
-
-    .story-panel.active {
-      transform: translateY(0);
-      opacity: 1;
-      border-color: rgba(122, 230, 255, 0.55);
-    }
-
-    .story-panel h2 {
-      font-size: clamp(2.1rem, 4vw, 4rem);
-      margin-bottom: 18px;
-    }
-
-    .story-panel h3 {
-      font-size: clamp(1.5rem, 2.4vw, 2.2rem);
-      margin-bottom: 14px;
-    }
-
-    .story-panel p {
-      margin: 0;
-      font-size: 1.06rem;
-      line-height: 1.7;
-      color: #dfeeff;
-    }
-
-    .cta-row {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 22px;
-    }
-
-    .cta-row a,
-    .project-card a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 16px;
-      border: 1px solid rgba(167, 204, 255, 0.4);
-      color: #edf5ff;
-      text-decoration: none;
-      background: rgba(255,255,255,0.03);
-      transition: 0.2s ease;
-    }
-
-    .cta-row a:hover,
-    .project-card a:hover {
-      background: rgba(122,230,255,0.12);
-      border-color: rgba(122,230,255,0.8);
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px 28px;
-      margin-top: 18px;
-    }
-
-    .skills-grid > div {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .skills-grid span {
-      font-weight: 600;
-      color: #f3f8ff;
-    }
-
-    .skill-bar {
-      height: 12px;
-      background: rgba(255,255,255,0.08);
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .skill-bar i {
-      display: block;
-      height: 100%;
-      background: linear-gradient(90deg, #7ae6ff, #7ef0b5, #ffde75);
-      box-shadow: 0 0 12px rgba(122, 230, 255, 0.7);
-    }
-
-    .timeline {
-      display: grid;
-      gap: 18px;
-      margin-top: 18px;
-    }
-
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 90px 1fr;
-      gap: 14px;
-      align-items: start;
-      padding-top: 10px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .date {
-      color: #8ac8ff;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 12px;
-      padding-top: 3px;
-    }
-
-    .timeline-item strong {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 1.1rem;
-    }
-
-    .project-card {
-      margin-top: 18px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: center;
-      padding: 20px 18px;
-      border: 1px solid rgba(167,204,255,0.2);
-      background: rgba(255,255,255,0.02);
-    }
-
-    .project-card h4 {
-      font-size: 1.3rem;
-      margin-bottom: 6px;
-    }
-
-    @media (max-width: 900px) {
-      .resume-page {
-        grid-template-columns: 1fr;
-      }
-
-      .resume-sidebar {
-        position: relative;
-        top: 0;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .resume-page {
-        padding-top: 64px;
-        padding-left: 16px;
-        padding-right: 16px;
-      }
-
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .project-card {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
-
   <script>
     // Update clock
     function updateClock() {
@@ -1225,7 +751,8 @@
 
       // Set default window size for desktop
       if (window.innerWidth > 768) {
-        windowEl.style.width = "500px";
+        windowEl.style.width = "680px";
+        windowEl.style.maxWidth = "calc(100vw - 40px)";
         windowEl.style.maxHeight = "600px";
       }
 
@@ -1240,9 +767,13 @@
           windowEl.style.left = "10px";
           windowEl.style.top = "10px";
         } else {
+          const defaultWidth = windowEl.id === "sifted" ? 720 : windowEl.id === "pokeguesser" ? 640 : 680;
+          windowEl.style.width = `${defaultWidth}px`;
+          windowEl.style.maxWidth = "calc(100vw - 40px)";
           // Desktop - scatter windows on first load, then keep them in view on resize.
           if (initial) {
-            const maxX = Math.max(20, window.innerWidth - 520);
+            const windowWidth = defaultWidth;
+            const maxX = Math.max(20, window.innerWidth - windowWidth - 20);
             windowEl.style.left = `${20 + Math.random() * maxX}px`;
             windowEl.style.top = `${50 + Math.random() * 100}px`;
           } else {
@@ -1273,8 +804,9 @@
       // Sifted window - wider for screenshot
       if (windowEl.id === "sifted") {
         if (window.innerWidth > 768) {
-          windowEl.style.width = "600px";
-          windowEl.style.left = `${Math.max(20, window.innerWidth / 2 - 300)}px`;
+          windowEl.style.width = "720px";
+          windowEl.style.maxWidth = "calc(100vw - 40px)";
+          windowEl.style.left = `${Math.max(20, window.innerWidth / 2 - 360)}px`;
           windowEl.style.top = "80px";
         } else {
           windowEl.style.left = "10px";
@@ -1543,43 +1075,6 @@
       createTaskbarItem(projectId, title);
     }
 
-    const resumeToggleBtn = document.getElementById("resume-normal-btn");
-    const desktopResumeBtn = document.getElementById("desktop-resume-btn");
-    const resumeProgressBar = document.getElementById("resume-progress-bar");
-    const panels = [...document.querySelectorAll(".story-panel")];
-
-    function setResumeMode() {
-      document.body.classList.remove("desktop-mode");
-      document.body.classList.add("resume-mode");
-      document.body.style.overflow = "auto";
-    }
-
-    function setDesktopMode() {
-      document.body.classList.remove("resume-mode");
-      document.body.classList.add("desktop-mode");
-      document.body.style.overflow = "hidden";
-    }
-
-    resumeToggleBtn.addEventListener("click", setDesktopMode);
-    desktopResumeBtn.addEventListener("click", setResumeMode);
-
-    function updateResumeProgress() {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = maxScroll > 0 ? (scrollTop / maxScroll) * 100 : 0;
-      resumeProgressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
-
-      panels.forEach((panel) => {
-        const rect = panel.getBoundingClientRect();
-        const visible = rect.top < window.innerHeight * 0.7 && rect.bottom > window.innerHeight * 0.25;
-        panel.classList.toggle("active", visible);
-      });
-    }
-
-    window.addEventListener("scroll", updateResumeProgress, { passive: true });
-    window.addEventListener("resize", updateResumeProgress);
-    setResumeMode();
-    updateResumeProgress();
   </script>
   
 </body>
